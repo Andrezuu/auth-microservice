@@ -14,6 +14,8 @@ jobs:
         java-version: '17'
         distribution: 'oracle'
         cache: 'maven'
+    - name: Set up directory
+      run: cd "AuthMicroservice Backend"
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run tests
