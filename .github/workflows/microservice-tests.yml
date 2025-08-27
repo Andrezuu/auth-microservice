@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [develop]
 
+defaults:
+  run:
+    working-directory: "AuthMicroservice Backend"
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,8 +17,6 @@ jobs:
         java-version: '17'
         distribution: 'oracle'
         cache: 'maven'
-    - name: Set up directory
-      run: cd "AuthMicroservice Backend"
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run tests
