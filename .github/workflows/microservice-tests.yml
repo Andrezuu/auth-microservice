@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    working-directory: "AuthMicroservice Backend"
+    working-directory: ./AuthMicroservice Backend
 jobs:
   test:
     runs-on: ubuntu-latest
